@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Enlightenment - Official</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Official site of The Enlightenment - music, tour dates, videos, and contact." />
+  <meta name="author" content="The Enlightenment" />
+</head>
+<body>
+  <header>
+    <div class="logo">The Enlightenment</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <video autoplay muted loop id="bg-video" playsinline>
+      <source src="media/hero-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-text">
+      <h1>Welcome to The Enlightenment</h1>
+      <p>Experience music beyond boundaries.</p>
+      <audio controls>
+        <source src="media/latest-single.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <a href="#music" class="btn">Listen Now</a>
+    </div>
+  </section>
+
+  <section id="about" class="content-section">
+    <h2>About The Enlightenment</h2>
+    <p>The Enlightenment is a genre-blending musical visionary delivering immersive soundscapes and profound lyrics. Founded in 2024, the artist challenges conventional music norms with innovation and passion.</p>
+    <img src="media/band-photo.jpg" alt="The Enlightenment Artist Photo" />
+  </section>
+
+  <section id="music" class="content-section">
+    <h2>Music</h2>
+    <p>Discover our latest album and singles.</p>
+    <div class="music-player">
+      <iframe src="https://open.spotify.com/embed/album/your-album-id" width="300" height="80" frameborder="0" allow="encrypted-media"></iframe>
+    </div>
+  </section>
+
+  <section id="events" class="content-section">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li>October 30, 2025 - The Enlightenment Live - New York City, NY</li>
+      <li>November 15, 2025 - The Enlightenment Tour - Los Angeles, CA</li>
+      <li>December 5, 2025 - Winter Festival - Chicago, IL</li>
+    </ul>
+  </section>
+
+  <section id="gallery" class="content-section">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="media/photo1.jpg" alt="Live performance photo" />
+      <img src="media/photo2.jpg" alt="Behind the scenes" />
+      <img src="media/photo3.jpg" alt="Music video still" />
+    </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <h2>Contact</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br />
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br />
+      <label for="message">Message:</label><br />
+      <textarea id="message" name="message" rows="5" required></textarea><br />
+      <button type="submit">Send</button>
+    </form>
+    <p>Or follow us on social media:</p>
+    <div class="social-links">
+      <a href="https://facebook.com/theenlightenment" target="_blank" rel="noopener">Facebook</a> |
+      <a href="https://instagram.com/theenlightenment" target="_blank" rel="noopener">Instagram</a> |
+      <a href="https://twitter.com/enlightenment" target="_blank" rel="noopener">Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The Enlightenment. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
