@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Enlightenment — Preview</title>
+  <meta name="description" content="Preview of The Enlightenment website with Spotify & Apple Music embeds." />
+  <style>
+    :root{--bg:#0b0b0f;--panel:#13131a;--text:#eaeaf2;--muted:#a8a8b3;--brand:#ff7a18;--brand2:#ffb703}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial}
+    a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+    .site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:linear-gradient(180deg,rgba(11,11,15,.95),rgba(11,11,15,.75));backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand svg{width:36px;height:36px}
+    .site-nav{display:flex;gap:16px;align-items:center}
+    .site-nav a{padding:8px 10px;border-radius:10px}
+    .site-nav a.active{background:rgba(255,255,255,.06)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.15);transition:.2s}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:var(--brand);color:#1d1200;border-color:transparent}
+    .btn.small{padding:6px 10px;border-radius:10px}
+    .hero{position:relative;min-height:68vh;display:grid;place-items:center;background:
+      radial-gradient(60% 60% at 50% 40%,rgba(255,122,24,.15),transparent), #0b0b0f;
+      overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:-20%;background:
+      radial-gradient(circle at 20% 20%, rgba(255,122,24,.25), transparent 35%),
+      radial-gradient(circle at 80% 30%, rgba(255,183,3,.2), transparent 45%),
+      radial-gradient(circle at 50% 80%, rgba(255,122,24,.15), transparent 40%);
+      filter:blur(30px)}
+    .hero-inner{position:relative;z-index:1;text-align:center;max-width:900px;padding:60px 20px}
+    .hero h1{font-size:clamp(2.2rem,5vw,4rem);margin:0 0 8px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    main .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:40px 20px;max-width:1100px;margin:0 auto}
+    .highlight article{background:var(--panel);padding:20px;border:1px solid rgba(255,255,255,.06);border-radius:16px}
+    .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:30px 20px;max-width:1100px;margin:0 auto}
+    .tile{background:linear-gradient(180deg,rgba(255,122,24,.08),rgba(255,122,24,.02));border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:18px}
+    .tile h3{margin:0 0 6px}
+    .page{max-width:1100px;margin:0 auto;padding:30px 20px}
+    .page.narrow{max-width:780px}
+    .embed.responsive{position:relative;overflow:hidden;border-radius:16px;border:1px solid rgba(255,255,255,.08)}
+    .embed.responsive iframe{display:block;width:100%;height:352px}
+    .shows{list-style:none;margin:20px 0 0;padding:0;border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden}
+    .shows li{display:grid;grid-template-columns:140px 1fr 1fr auto;gap:10px;align-items:center;padding:12px 14px;background:rgba(255,255,255,.02)}
+    .shows li:nth-child(even){background:rgba(255,255,255,.04)}
+    .shows time{font-weight:700}.shows .city{color:var(--muted)}
+    .muted{color:var(--muted)}
+    .site-footer{padding:30px 20px;text-align:center;color:var(--muted)}
+    .footer-social{display:flex;gap:10px;justify-content:center;margin-top:8px}
+    .footer-social .icon{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid rgba(255,255,255,.1);border-radius:10px}
+    @media (max-width:900px){main .grid{grid-template-columns:1fr}.tiles{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.shows li{grid-template-columns:1fr;gap:4px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <!-- Inline SVG logo -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff7a18"/><stop offset="1" stop-color="#ffb703"/></linearGradient></defs><g fill="url(#g)"><circle cx="20" cy="20" r="12"/><path d="M36 20h120v4H36z"/></g></svg>
+      <span>The Enlightenment</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#music">Music</a>
+      <a href="#shows">Shows</a>
+      <a href="#about">About</a>
+      <a class="btn" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Legacy In Motion</h1>
+        <p>New era. New sound. Stream the album now.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#music">▶︎ Play on Spotify</a>
+          <a class="btn" href="#music"> Play on Apple Music</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid highlight" id="music">
+      <article>
+        <h2>Spotify</h2>
+        <div class="embed responsive">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1mvJdCbPKawZE53BsepGHm" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="cta-row" style="margin-top:10px">
+          <a class="btn" target="_blank" rel="noopener" href="https://open.spotify.com/artist/2iRWGoXTQgEqyEcUJ8Asb5">Follow on Spotify</a>
+        </div>
+      </article>
+      <article>
+        <h2>Apple Music</h2>
+        <div class="embed responsive">
+          <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:900px;overflow:hidden;border-radius:12px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/legacy-in-motion/1845637309"></iframe>
+        </div>
+      </article>
+    </section>
+
+    <section class="tiles" id="shows">
+      <a class="tile" href="#shows"><h3>Shows</h3><p>Tour dates & appearances</p></a>
+      <a class="tile" href="#about"><h3>About</h3><p>Story • Vision • Mission</p></a>
+      <a class="tile" href="#contact"><h3>Contact</h3><p>Booking & management</p></a>
+      <a class="tile" href="#music"><h3>Music</h3><p>Albums • Singles • Videos</p></a>
+    </section>
+
+    <section class="page" aria-labelledby="shows-h1">
+      <h2 id="shows-h1">Upcoming Shows</h2>
+      <ul class="shows">
+        <li><time datetime="2025-11-15">Nov 15, 2025</time><span class="city">Oklahoma City, OK</span><span class="venue">AFS Live Sessions</span><a class="btn small" href="#">Tickets</a></li>
+        <li><time datetime="2026-01-20">Jan 20, 2026</time><span class="city">Dallas, TX</span><span class="venue">Deep Ellum Theater</span><a class="btn small" href="#">Tickets</a></li>
+      </ul>
+    </section>
+
+    <section class="page narrow" id="about">
+      <h2>Who We Are</h2>
+      <p><strong>The Enlightenment</strong> blends Pop, Country, and Gospel into a sound that’s cinematic, heartfelt, and uplifting. The 2025 era, <em>Legacy In Motion</em>, captures a journey of faith, resilience, and gratitude for the community that made it possible.</p>
+      <h3>Social Highlights</h3>
+      <p class="muted">Live previews are optional. Replace with specific post links to show embeds.</p>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://instagram.com/enlightenment819/" data-instgrm-version="14" style="background:#000;border:0;margin:1rem auto;max-width:540px;width:100%">
+        <a href="https://instagram.com/enlightenment819/" target="_blank" rel="noopener">View on Instagram</a>
+      </blockquote>
+      <script async src="https://www.instagram.com/embed.js"></script>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@enlightenment819" style="max-width:605px;min-width:325px;margin:1rem auto">
+        <section><a target="_blank" href="https://www.tiktok.com/@enlightenment819" rel="noopener">View on TikTok</a></section>
+      </blockquote>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+    </section>
+
+    <section class="page narrow" id="contact">
+      <h2>Contact & Booking</h2>
+      <p>Email: <a href="mailto:info@pimecineng.com">info@pimecineng.com</a></p>
+      <div class="cta-row" style="justify-content:flex-start">
+        <a class="btn" href="https://instagram.com/enlightenment819/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://www.tiktok.com/@enlightenment819" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> The Enlightenment • All rights reserved.</p>
+    <p class="footer-social">
+      <a class="icon" href="https://instagram.com/enlightenment819/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+      <a class="icon" href="https://www.tiktok.com/@enlightenment819" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+    </p>
+  </footer>
+  <script>
+    const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
