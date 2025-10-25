@@ -1,43 +1,106 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: CI & Deploy static site to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  pull_request:
+    paths:
+      - "index.html"
+      - "about.html"
+      - "contact.html"
+      - "music.html"
+      - "shows.html"
+      - "links.html"
+      - "assets/**"
+      - "css/**"
+      - "js/**"
+      - "CNAME"
+      - ".nojekyll"
   push:
-    branches: ["main"]
+    branches: [ "main" ]
+    paths:
+      - "index.html"
+      - "about.html"
+      - "contact.html"
+      - "music.html"
+      - "shows.html"
+      - "links.html"
+      - "assets/**"
+      - "css/**"
+      - "js/**"
+      - "CNAME"
+      - ".nojekyll"
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # --- Preflight: link checker on PRs and pushes ---
+  linkcheck:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Link check (lychee)
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: >-
+            --config .lychee.toml
+            --no-progress
+            --format markdown
+            --output lychee-report.md
+            .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload link report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-report
+          path: lychee-report.md
+
+  # --- Deploy only after linkcheck passes; only for pushes to main ---
+  deploy:
+    if: github.event_name == 'push'
+    needs: [linkcheck]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify site entrypoint
+        run: |
+          set -euo pipefail
+          test -f index.html || (echo "::error file=index.html::index.html missing at repo root" && exit 1)
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
+
+      - name: Upload artifact (only site files)
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: .
+          exclude_globs: |
+            .git/**
+            .github/**
+            **/*.md
+            **/README*
+            **/LICENSE*
+            **/node_modules/**
+            **/test/**
+            **/tests/**
+            **/.DS_Store
+            **/Thumbs.db
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
