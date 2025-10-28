@@ -15,7 +15,7 @@
     <div class="logo">The Enlightenment</div>
     <nav>
       <ul>
-        <li><a href="#hero">Home</a></li>
+        <li><a href="#The Enlightenment Hero Banner">Home</a></li>
         <li><a href="#music">Music</a></li>
         <li><a href="#tour">Tour Dates</a></li>
         <li><a href="#about">About</a></li>
@@ -24,8 +24,8 @@
     </nav>
   </header>
 
-  <section id="hero">
-    <div class="hero-content">
+  <section id="The Enlightenment Hero Banner">
+    <div class="The Enlightenment Hero Banner-content">
       <h1>Experience the Journey of Sound</h1>
       <p>A soulful blend of rhythm, nature, and emotion.</p>
       <a href="#music" class="cta-button">Listen Now</a>
@@ -36,7 +36,7 @@
     <h2>Music</h2>
     <div class="album-grid">
       <div class="album">
-        <img src="album1.jpg" alt="Album 1">
+        <img src="Album Cover.jpg" alt="Album 1">
         <h3>Awakening</h3>
         <audio controls>
           <source src="song1.mp3" type="audio/mpeg">
@@ -116,3 +116,4 @@
   </script>
 </body>
 </html>
+
