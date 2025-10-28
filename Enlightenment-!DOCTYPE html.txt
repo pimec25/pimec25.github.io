@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Enlightenment | Official Site</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">The Enlightenment</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#tour">Tour Dates</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Experience the Journey of Sound</h1>
+      <p>A soulful blend of rhythm, nature, and emotion.</p>
+      <a href="#music" class="cta-button">Listen Now</a>
+    </div>
+  </section>
+
+  <section id="music">
+    <h2>Music</h2>
+    <div class="album-grid">
+      <div class="album">
+        <img src="album1.jpg" alt="Album 1">
+        <h3>Awakening</h3>
+        <audio controls>
+          <source src="song1.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="album">
+        <img src="album2.jpg" alt="Album 2">
+        <h3>Echoes of Light</h3>
+        <audio controls>
+          <source src="song2.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <section id="tour">
+    <h2>Tour Dates</h2>
+    <div class="tour-grid">
+      <div class="tour-item">
+        <p class="date">Nov 15, 2025</p>
+        <p class="city">Austin, TX</p>
+        <a href="#" class="ticket-link">Get Tickets</a>
+      </div>
+      <div class="tour-item">
+        <p class="date">Dec 03, 2025</p>
+        <p class="city">Nashville, TN</p>
+        <a href="#" class="ticket-link">Get Tickets</a>
+      </div>
+      <div class="tour-item">
+        <p class="date">Jan 10, 2026</p>
+        <p class="city">Los Angeles, CA</p>
+        <a href="#" class="ticket-link">Get Tickets</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="about-content">
+      <img src="artist.jpg" alt="The Enlightenment">
+      <p>
+        The Enlightenment is a visionary pop artist blending natural textures, authentic vocals,
+        and introspective lyrics. Originating from a passion for harmony and truth, their music
+        evokes the warmth and connection of the earth itself.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="social-links">
+      <a href="#">Instagram</a>
+      <a href="#">Spotify</a>
+      <a href="#">YouTube</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The Enlightenment. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
+</body>
+</html>
