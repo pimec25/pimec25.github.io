@@ -1,0 +1,18 @@
+<!-- livestream.html -->
+<section class="stream" style="background-image: url('assets/livestream_section.png');">
+  <h2>Live Stream</h2>
+  <div class="stream-player">
+    <iframe src="..." width="100%" height="400" allowfullscreen></iframe>
+  </div>
+  <div class="live-chat">
+    <h3>Live Chat</h3>
+    <div class="chat-ui" aria-label="Live Chat">[Chat UI Placeholder]</div>
+  </div>
+  <section class="stream-schedule">
+    <h3>Upcoming Streams</h3>
+    <ul>
+      <li>Friday Nov 7 – "Synthwave Friday" – 8:00pm CST</li>
+      <!-- ... -->
+    </ul>
+  </section>
+</section>

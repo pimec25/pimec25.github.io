@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>The Enlightenment | Home</title>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron:700|Rajdhani:400,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">THE ENLIGHTENMENT</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="livestream.html">Live Stream</a>
+      <a href="music.html">Music</a>
+      <a href="merch.html">Merch</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <div id="cart-counter" aria-label="Cart items">🛒 <span id="cartCount">0</span></div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background-image: url('assets/hero_section.png');">
+    <div class="hero-content">
+      <h1>Welcome to The Enlightenment</h1>
+      <div id="live-indicator" class="live-indicator">🔴 Live Now</div>
+      <p id="stream-topic">Current Stream: Mixing Synthwave Live</p>
+      <a href="livestream.html" class="cta-btn">Watch Stream</a>
+    </div>
+  </section>
+
+  <!-- Featured Track Section -->
+  <section class="featured-track" style="background-image: url('assets/featured_track.png');">
+    <h2>Featured Release</h2>
+    <iframe src="https://open.spotify.com/embed/track/xyz" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  </section>
+
+  <!-- Latest News Blog Feed -->
+  <section class="blog-snippets" style="background-image: url('assets/latest_news.png');">
+    <h2>Latest News</h2>
+    <div class="blog-feed">
+      <article>
+        <h3><a href="blog-post.html">New Merch Drop!</a></h3>
+        <p>Announcing new T-shirts and vinyl...</p>
+        <span class="date">Nov 2, 2025</span>
+      </article>
+      <article>
+        <h3><a href="blog-post.html">Live Stream This Friday</a></h3>
+        <p>Join us for a synthwave jam session…</p>
+        <span class="date">Oct 31, 2025</span>
+      </article>
+      <article>
+        <h3><a href="blog-post.html">EP Release</a></h3>
+        <p>Our new EP “Neon Dreams” is now live…</p>
+        <span class="date">Oct 25, 2025</span>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <div id="mini-player"></div>
+    <span class="copyright">© 2025 The Enlightenment</span>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="player.js"></script>
+  <script src="stream.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+const tracks = [
+  {title: "Neon Dreams", artist: "The Enlightenment", src: "assets/neon-dreams.mp3"},
+  {title: "Starlit Path", artist: "The Enlightenment", src: "assets/starlit-path.mp3"},
+];
+let currentTrack = 0;
+
+function renderPlayer() {
+  const player = document.getElementById('mini-player');
+  player.innerHTML = `
+    <div class="music-miniplayer" aria-label="Music player">
+      <span>${tracks[currentTrack].title} - ${tracks[currentTrack].artist}</span>
+      <audio controls src="${tracks[currentTrack].src}" preload="auto"></audio>
+      <button onclick="nextTrack()" aria-label="Next Track">▶️</button>
+    </div>
+  `;
+}
+window.nextTrack = function() {
+  currentTrack = (currentTrack + 1) % tracks.length;
+  renderPlayer();
+}
+document.addEventListener('DOMContentLoaded', renderPlayer);

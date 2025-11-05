@@ -1,0 +1,21 @@
+/index.html
+/livestream.html
+/music.html
+/merch.html
+/about.html
+/blog.html
+/blog-post.html
+/assets/
+  hero_section.png
+  featured_track.png
+  latest_news.png
+  livestream_section.png
+  music_catalog.png
+  merch_store.png
+  about_epk.png
+  blog_section.png
+  (any additional mock images as needed)
+style.css
+main.js
+player.js
+stream.js
