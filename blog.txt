@@ -1,4 +1,0 @@
-<section style="background-image:url('assets/blog_section.jpg')">
-  <h2>Latest News</h2>
-  <!-- Blog/news post list -->
-</section>
