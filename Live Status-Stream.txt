@@ -1,9 +1,0 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const liveIndicator = document.getElementById('live-indicator');
-  const streamTopic = document.getElementById('stream-topic');
-  setInterval(() => {
-    const isLive = Math.random() > 0.5;
-    liveIndicator.style.display = isLive ? 'inline-block' : 'none';
-    streamTopic.textContent = isLive ? "Current Stream: Mixing Synthwave Live" : "No live stream right now";
-  }, 6000);
-});
