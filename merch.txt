@@ -1,4 +1,0 @@
-<section style="background-image:url('assets/merch_store.jpg')">
-  <h2>The Enlightenment Merch</h2>
-  <!-- Merch listings: T-Shirts, Vinyl, Stickers, with add-to-cart buttons -->
-</section>
