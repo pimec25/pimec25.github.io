@@ -1,0 +1,4 @@
+<section style="background-image:url('assets/music_catalog.jpg')">
+  <h2 class="centered-heading">The Enlightenment Music Catalog</h2>
+  <!-- Album/track cards go here, styled like your example image -->
+</section>
