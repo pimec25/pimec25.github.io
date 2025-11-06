@@ -1,4 +1,0 @@
-<section style="background-image:url('assets/about_epk.jpg')">
-  <h2>About The Enlightenment</h2>
-  <!-- Artist bio, high-res photo, contact form for bookings etc. -->
-</section>
