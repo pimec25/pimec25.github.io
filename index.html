@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Enlightenment | Official Artist Site</title>
+  <meta name="description" content="The Enlightenment — Pop, Afrobeat, Country, Gospel artist blending soul and storytelling into timeless music.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Hero Section -->
+  <header class="hero" role="banner">
+    <img src="hero_section.jpg" alt="The Enlightenment Hero" class="hero-img" />
+    <div class="hero-overlay">
+      <h1 class="hero-title">The Enlightenment</h1>
+      <p class="hero-subtitle">Pop • Afrobeat • Country • Gospel</p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="#music-catalog">Listen Now</a>
+        <a class="btn" href="#about">About</a>
+      </div>
+    </div>
+  </header>
+  <!-- Navigation -->
+  <nav class="main-nav" role="navigation" aria-label="Main site navigation">
+    <ul>
+      <li><a href="#news">Latest News</a></li>
+      <li><a href="#livestream">Live Concerts</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#about">About / EPK</a></li>
+      <li><a href="#merch">Merch</a></li>
+      <li><a href="#featured-track">Featured Track</a></li>
+      <li><a href="#music-catalog">Music Catalog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Main Sections -->
+  <main>
+    <!-- Latest News -->
+    <section id="news" class="section news-section" aria-labelledby="news-title">
+      <h2 id="news-title">Latest News</h2>
+      <img src="latest_news.jpg" alt="Latest news for The Enlightenment" class="section-img" loading="lazy" />
+    </section>
+    <!-- Livestream/Concert -->
+    <section id="livestream" class="section livestream-section" aria-labelledby="livestream-title">
+      <h2 id="livestream-title">Live Concerts</h2>
+      <img src="livestream_secti.jpg" alt="Live Concert by The Enlightenment" class="section-img" loading="lazy" />
+    </section>
+    <!-- Blog Section -->
+    <section id="blog" class="section blog-section" aria-labelledby="blog-title">
+      <h2 id="blog-title">Blog</h2>
+      <img src="blog_section.jpg" alt="Blog Section Neon Visuals" class="section-img" loading="lazy" />
+    </section>
+    <!-- About / EPK -->
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <h2 id="about-title">About / EPK</h2>
+      <img src="about_epk.jpg" alt="About The Enlightenment" class="section-img" loading="lazy" />
+      <div class="about-details">
+        <p>The Enlightenment blends soul, rhythm, and spiritual storytelling into a multi-genre sound that transcends boundaries. Emotional power, pulse, authenticity, and truth fuse in his artistry.</p>
+        <ul class="bullets">
+          <li><strong>Latest Album:</strong> Legacy in Motion</li>
+          <li><strong>Genres:</strong> Pop, Afrobeat, Country, Gospel</li>
+          <li><strong>Instagram:</strong> enlightenment819</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Merch Store -->
+    <section id="merch" class="section merch-section" aria-labelledby="merch-title">
+      <h2 id="merch-title">The Enlightenment Merch</h2>
+      <img src="merch_store.jpg" alt="Merch Store" class="section-img" loading="lazy" />
+      <div class="cta-row center">
+        <a class="btn btn--primary" href="#merch">Shop Now</a>
+      </div>
+    </section>
+    <!-- Featured Track / Music Player -->
+    <section id="featured-track" class="section track-section" aria-labelledby="track-title">
+      <h2 id="track-title">Featured Track</h2>
+      <img src="featured_track.jpg" alt="Featured Track Music Player" class="section-img" loading="lazy" />
+      <div class="track-links">
+        <a class="chip" href="https://open.spotify.com/" target="_blank" rel="noopener">Spotify</a>
+        <a class="chip" href="https://music.apple.com/" target="_blank" rel="noopener">Apple Music</a>
+        <a class="chip" href="https://music.youtube.com/" target="_blank" rel="noopener">YouTube Music</a>
+        <a class="chip" href="https://tidal.com/" target="_blank" rel="noopener">TIDAL</a>
+      </div>
+    </section>
+    <!-- Music Catalog -->
+    <section id="music-catalog" class="section catalog-section" aria-labelledby="catalog-title">
+      <h2 id="catalog-title">Music Catalog</h2>
+      <img src="music_catalog.jpg" alt="Music Catalog" class="section-img" loading="lazy" />
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p class="muted">For booking, media inquiries, or collaborations:</p>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:info@pimecineng.com">info@pimecineng.com</a></li>
+        <li><strong>Instagram:</strong> <a href="https://instagram.com/enlightenment819" target="_blank">enlightenment819</a></li>
+        <li><strong>Spotify:</strong> <a href="https://open.spotify.com/" target="_blank">Artist Page</a></li>
+      </ul>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <p>© <span id="year"></span> The Enlightenment. All rights reserved.</p>
+  </footer>
+  <script>
+    // Dynamic year for footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
